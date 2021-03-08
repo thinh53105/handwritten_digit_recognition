@@ -136,7 +136,7 @@ def btn_save_action():
         correct_answer = digit
     else:
         correct_answer = int(cbx_correct.get())
-    filename = "training_set/" + str(correct_answer) + "_" + str(last_index).zfill(6) + ".png"
+    filename = "training_set/" + str(correct_answer) + "/" + str(correct_answer) + "_" + str(last_index).zfill(6) + ".png"
     cv2.imwrite(filename, tmp_image)
     last_index += 1
     messagebox.showinfo("Information", "Save successfully!")
